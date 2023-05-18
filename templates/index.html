@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Analyzer</title>
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+  <div class="floating-box" id="floating-box">
+    <div class="header">
+      <h2>Movie Analyzer</h2>
+    </div>
+    <div class="progress-bar">
+      <div class="progress" id="progress"></div>
+    </div>
+    <p class="percentage" id="percentage">0%</p>
+    <p id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+  <div class="success-screen">
+    <div class="success-header">
+      <h2>Success!</h2>
+      <button class="close-button">&times;</button>
+    </div>
+    <p>Accuracy: <span class="accuracy"></span></p>
+    <p>Sentiment: <span class="sentiment"></span></p>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Movie Analyzer</h1>
+      <nav class="menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Top Movies</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="search-section">
+    <div class="container">
+      <form id="search-form">
+        <input type="text" id="search-bar" placeholder="Search...">
+        <button type="submit" id="search-button">Search</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="top-movies-section">
+    <div class="container">
+      <h2>Top Movies</h2>
+      <div class="movie-posters">
+        <div class="movie-poster">
+          <img src="/static/1.jfif" alt="Movie Poster 1">
+          <h3>Titanic</h3>
+        </div>
+        <div class="movie-poster">
+          <img src="/static/2.jfif" alt="Movie Poster 2">
+          <h3>Avengers</h3>
+        </div>
+        <!-- Add more movie posters here -->
+      </div>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/static/main.js"></script>
+</body>
+
+</html>

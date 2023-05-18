@@ -1,0 +1,361 @@
+    .floating-box {
+      display: none; /* Initially hidden */
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      padding: 20px;
+      z-index: 1;
+    }
+    
+    .progress-bar {
+      height: 20px;
+      background-color: transparent; /* Set background color to transparent */
+      border-radius: 10px;
+      margin-top: 20px;
+      overflow: hidden;
+      box-shadow: none; /* Remove the box shadow */
+    }
+    
+    .header {
+      background-color: red;
+      color: #ffffff;
+      padding: 10px;
+      border-radius: 8px 8px 0 0;
+    }
+    
+    
+    .progress {
+      height: 100%;
+      transition: width 0.3s ease-in-out;
+    }
+    
+    /* Progress Bar Colors */
+    .progress-bar .progress {
+      background-color: red;
+    }
+    
+    .progress-bar .progress.analysing {
+      background-color: yellow;
+    }
+    
+    .progress-bar .progress.finished {
+      background-color: green;
+    }
+    
+    .progress-bar .progress.finished.blue {
+      background-color: blue;
+    }
+    
+    .percentage {
+      margin-top: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+    
+    .box-shadow {
+      position: fixed;
+      top: calc(50% + 4px);
+      left: calc(50% + 4px);
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 20px;
+      background: rgba(0, 0, 0, 0.2);
+      filter: blur(10px);
+      border-radius: 8px;
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    p {
+      margin-top: 20px;
+      text-align: center;
+    }
+    
+    .success-screen {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      padding: 20px;
+      display: none;
+      z-index: 1;
+    }
+    
+    .success-header {
+      background-color: green;
+      color: #ffffff;
+      padding: 10px;
+      border-radius: 8px 8px 0 0;
+      position: relative;
+    }
+    
+    .close-button {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #ffffff;
+      border: none;
+      background: none;
+      font-size: 18px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+    }
+    
+    .close-button:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+    
+    .close-button:focus {
+      outline: none;
+    }
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 24px;
+  margin: 0;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.search-section {
+  background-color: #f5f5f5;
+  padding: 40px 0;
+  text-align: center;
+}
+
+#search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-bar {
+  padding: 10px;
+  width: 300px;
+  border-radius: 4px 0 0 4px;
+  border: none;
+}
+
+#search-button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.top-movies-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.movie-posters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.movie-poster {
+  margin: 10px;
+  max-width: 200px;
+}
+
+.movie-poster img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.movie-poster h3 {
+  margin: 10px 0 0;
+}
+/* Rest of the CSS code remains the same */
+
+.menu {
+  margin-left: auto;
+}
+
+.menu ul li {
+  margin-right: 10px;
+}
+
+.search-section {
+  background-color: #f5f5f5;
+  padding: 40px 0;
+  text-align: center;
+}
+
+#search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-bar {
+  padding: 10px;
+  width: 300px;
+  border-radius: 4px 0 0 4px;
+  border: none;
+}
+
+#search-button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.top-movies-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.movie-posters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.movie-poster {
+  margin: 10px;
+  max-width: 200px;
+}
+
+.movie-poster img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.movie-poster h3 {
+  margin: 10px 0 0;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+.menu {
+  margin-left: auto;
+  border-radius: 0; /* Remove the border-radius property */
+}
+
+/* Rest of the CSS code remains the same */
+
+.main-content {
+  flex: 1;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  flex: 1;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+/* Rest of the CSS code remains the same */
+
+.movie-poster {
+  display: inline-block;
+  position: relative;
+}
+
+.movie-poster img {
+  width: 200px; /* Adjust the initial width of the posters as needed */
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+.movie-poster:hover img {
+  width: 250px; /* Adjust the width on hover as desired */
+}
+/* Rest of the CSS code remains the same */
+
+.movie-poster {
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-poster img {
+  width: 200px; /* Adjust the initial width of the posters as needed */
+  height: auto;
+}
+
+.movie-poster:hover {
+  transform: translateY(-10px); /* Adjust the vertical displacement as desired */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adjust the box shadow as desired */
+}
