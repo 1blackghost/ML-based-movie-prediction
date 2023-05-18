@@ -28,7 +28,7 @@
       <h2>Error!</h2>
       <button class="close-button2">&times;</button>
     </div>
-    <p>Uh Oh, Something Just Went Wrong!</p>
+    <p id="errorM">Uh Oh, Something Just Went Wrong!</p>
   </div>
   <header class="header">
     <div class="container">
@@ -48,6 +48,7 @@
     <div class="container">
       <form id="search-form">
         <input autocomplete="off" type="text" id="search-bar" placeholder="Search...">
+
         <button type="submit" id="search-button">Search</button>
       </form>
     </div>
@@ -55,7 +56,7 @@
 
   <section class="top-movies-section">
     <div class="container">
-      <h2>Top Movies</h2>
+      <h2 class="section-title">Top Movies</h2>
       <div class="movie-posters">
         <div class="movie-poster">
           <img src="/static/1.jfif" alt="Movie Poster 1">
@@ -69,6 +70,41 @@
       </div>
     </div>
   </section>
+<section id="about" class="about-section">
+  <div class="container">
+    <h2 class="section-title">About Movie Analyzer</h2>
+    <div class="section-content">
+Movie Analyzer is an advanced platform that utilizes cutting-edge machine learning techniques to offer comprehensive insights and analysis of movies. Our platform employs state-of-the-art algorithms to extract valuable information from movie reviews, social media, and other sources, providing users with a deep understanding of films and enabling them to explore new perspectives.
+
+      <hr>
+By leveraging natural language processing and sentiment analysis, Movie Analyzer examines the sentiment, themes, and critical reception of movies. This data-driven approach allows users to make informed decisions and enhance their movie-watching experience. We strive to deliver accurate and reliable analysis, ensuring that our users have access to the most up-to-date and insightful information about their favorite films.
+
+      <hr>
+Whether you're a casual moviegoer or a dedicated cinephile, Movie Analyzer caters to all levels of interest and curiosity. Our platform offers a normalized and easily understandable text, making it accessible to a wide range of users. Join Movie Analyzer today and unlock a world of in-depth movie analysis and discovery!
+    </div>
+  </div>
+</section>
+<section id="contact-section">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <form id="contact-form">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Your message" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="/static/main.js"></script>

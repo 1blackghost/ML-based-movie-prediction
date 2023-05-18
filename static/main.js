@@ -40,7 +40,14 @@ $(document).ready(function() {
   $('#search-form').submit(function(event) {
     event.preventDefault();
     var movieName = $('#search-bar').val();
-    getMovieData(movieName);
+    if (movieName==""){
+      $(".error-screen").show();
+      $("#errorM").text("Wait What! Trying to search with empty search?")
+                
+    }
+    else{
+      getMovieData(movieName);
+    }
   });
 
   function stopPing() {
@@ -88,14 +95,10 @@ $(document).ready(function() {
                     }
                   }, 2000);
                 }
-
-                if (pingResponse.status === "bad") {
-                  $(".success-screen").show();
-                }
-
                 if (samePercentageCount >= errorThreshold) {
                   $("#floating-box").hide();
                   $(".error-screen").show();
+                  $("#errorM").text("Maximum Timeout Exceeded! Please check for typos or if the movie exists. Sometimes, the movie may not have enough data to provide accurate analysis.")
                   stopPing();
                 }
               },

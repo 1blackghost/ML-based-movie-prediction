@@ -221,6 +221,14 @@ p {
   text-align: center;
 }
 
+#search-button{
+  width: 150px;
+
+}
+#search-bar {
+  width: 300px;
+}
+
 #search-bar {
   padding: 10px;
   font-size: 16px;
@@ -269,6 +277,7 @@ p {
 .movie-poster h3 {
   margin-top: 10px;
 }
+
 /* Footer */
 .footer {
   background-color: #333333;
@@ -276,6 +285,7 @@ p {
   padding: 20px;
   text-align: center;
 }
+
 /* Movie Poster Hover Animation */
 .movie-posters {
   display: flex;
@@ -328,4 +338,110 @@ p {
 
 .movie-poster:hover h3 {
   opacity: 1;
+}
+
+.section-content {
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.section-content p {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section-content p::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 20%;
+  height: 2px;
+  background-color: #333333;
+}
+
+.section-content p:last-child::after {
+  display: none;
+}
+
+.about-section {
+    background-color: #f2f2f2;
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #333333;
+}
+
+.section-content {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555555;
+}
+
+.section-content p {
+  margin-bottom: 20px;
+}
+
+#contact-section {
+  background-color: #ffffff;
+  padding: 40px 0;
+}
+
+#contact-section .container {
+  text-align: center;
+}
+
+#contact-section h2 {
+  margin-bottom: 20px;
+}
+
+#contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#contact-form .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+#contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#contact-form button {
+  padding: 10px 20px;
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }

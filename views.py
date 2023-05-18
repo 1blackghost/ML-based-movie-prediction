@@ -34,6 +34,8 @@ def create_new_thread(movie_name, uid):
 @app.route("/getMovie", methods=["POST", "GET"])
 def get_movie():
     name = request.form.get("movieName")
+    if name=="":
+        return {"status":"bad"},400
     session["uid"] = helper.insert_user(movie_name=name, progress=0, message="Fetching Movie Id")
     t = threading.Thread(target=create_new_thread, args=(name, session["uid"]))
     t.start()
