@@ -1,5 +1,7 @@
 import sqlite3
 
+DATABASE_FILE = 'users.db'
+
 
 def reset_back_to_start() -> None:
     """
@@ -13,7 +15,7 @@ def reset_back_to_start() -> None:
     Returns:
         None
     """
-    conn = sqlite3.connect('users.db')
+    conn = sqlite3.connect(DATABASE_FILE, check_same_thread=False)
     c = conn.cursor()
 
     print("[WARNING!] You need admin privilege to clear and reset the data! Are you sure? (y/n/yes/no)")
@@ -29,7 +31,6 @@ def reset_back_to_start() -> None:
                      )''')
 
     conn.commit()
-    c.close()
     conn.close()
 
 
@@ -47,7 +48,7 @@ def update_user(uid, movie_name=None, progress=None, message=None, sentiment=Non
     Returns:
         None
     """
-    conn = sqlite3.connect('users.db')
+    conn = sqlite3.connect(DATABASE_FILE, check_same_thread=False)
     c = conn.cursor()
     update_fields = []
 
@@ -69,7 +70,6 @@ def update_user(uid, movie_name=None, progress=None, message=None, sentiment=Non
         c.execute(update_query, values)
 
     conn.commit()
-    c.close()
     conn.close()
 
 
@@ -86,14 +86,13 @@ def insert_user(movie_name="", progress=0, message="", sentiment="") -> int:
     Returns:
         int: ID of the inserted user.
     """
-    conn = sqlite3.connect('users.db')
+    conn = sqlite3.connect(DATABASE_FILE, check_same_thread=False)
     c = conn.cursor()
 
     c.execute("INSERT INTO users (movie_name, progress, message, sentiment) VALUES (?, ?, ?, ?)",
               (movie_name, progress, message, sentiment))
     uid = c.lastrowid
     conn.commit()
-    c.close()
     conn.close()
 
     return uid
@@ -109,7 +108,7 @@ def read_user(uid=-1) -> list:
     Returns:
         list: User details as a list of tuples.
     """
-    conn = sqlite3.connect('users.db')
+    conn = sqlite3.connect(DATABASE_FILE, check_same_thread=False)
     c = conn.cursor()
 
     if uid != -1:
@@ -117,9 +116,6 @@ def read_user(uid=-1) -> list:
         result = c.fetchone()
     else:
         c.execute("SELECT * FROM users")
-        result = c.fetchall()
-
-    c.close()
     conn.close()
 
     return result

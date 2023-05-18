@@ -10,20 +10,26 @@
       <h2>Movie Analyzer</h2>
     </div>
     <div class="progress-bar">
-      <div class="progress" id="progress"></div>
+      <div class="progress" id="progress-bar"></div>
     </div>
-    <p class="percentage" id="percentage">0%</p>
-    <p id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p class="percentage" id="progress-text">0%</p>
+    <p id="text">Initializing System...</p>
   </div>
   <div class="success-screen">
     <div class="success-header">
       <h2>Success!</h2>
       <button class="close-button">&times;</button>
     </div>
-    <p>Accuracy: <span class="accuracy"></span></p>
-    <p>Sentiment: <span class="sentiment"></span></p>
+    <p id="messageS">Accuracy: <span id="accuracy" class="accuracy"></span></p>
+    <p>Sentiment: <span id="sentiment" class="sentiment"></span></p>
   </div>
-
+  <div class="error-screen">
+    <div class="error-header">
+      <h2>Error!</h2>
+      <button class="close-button2">&times;</button>
+    </div>
+    <p>Uh Oh, Something Just Went Wrong!</p>
+  </div>
   <header class="header">
     <div class="container">
       <h1 class="logo">Movie Analyzer</h1>
@@ -41,7 +47,7 @@
   <section class="search-section">
     <div class="container">
       <form id="search-form">
-        <input type="text" id="search-bar" placeholder="Search...">
+        <input autocomplete="off" type="text" id="search-bar" placeholder="Search...">
         <button type="submit" id="search-button">Search</button>
       </form>
     </div>
@@ -66,6 +72,9 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="/static/main.js"></script>
-</body>
 
+  <footer class="footer">
+    <p>&copy; 2023 Movie Analyzer. All rights reserved.</p>
+  </footer>
+</body>
 </html>
