@@ -411,7 +411,7 @@ p {
 
 #contact-form {
   max-width: 500px;
-  margin: 0 auto;
+  margin: 20px;
 }
 
 #contact-form .form-group {
@@ -426,7 +426,8 @@ p {
 
 #contact-form input,
 #contact-form textarea {
-  width: 100%;
+  width: 90%;
+  align-items: center;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -445,6 +446,7 @@ p {
       display: none; /* Hide the button by default */
     }
 @media screen and (max-width: 768px) {
+
   .menu a {
   color: #ffffff;
   text-decoration: none;
@@ -506,6 +508,9 @@ p {
   .hamburger-btn.open ~ .menu {
     display: block;
   }
+  
+
+
 }
 .moviename{
   color: white;
@@ -580,3 +585,16 @@ p {
 .movie-posters-container::-webkit-scrollbar {
   display: none; /* For Chrome, Safari, and Opera */
 }
+/* Add this media query at the end of the CSS code */
+@media screen and (max-width: 768px) {
+  .movie-posters-container{
+    scrollbar-width: auto;
+  }
+  body{
+    padding: 0;
+    margin:0;
+  }
+  .section-content{
+    margin-left:20px;
+    margin-right: 20px;
+  }
