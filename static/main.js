@@ -1,4 +1,20 @@
 $(document).ready(function() {
+
+    $(".left-arrow").click(function() {
+    $(".movie-posters-container").animate({ scrollLeft: "-=200" }, "slow");
+  });
+
+  $(".right-arrow").click(function() {
+    $(".movie-posters-container").animate({ scrollLeft: "+=200" }, "slow");
+  });
+    const hamburgerBtn = document.querySelector('.hamburger-btn');
+  const menu = document.querySelector('.menu');
+
+  hamburgerBtn.addEventListener('click', () => {
+    hamburgerBtn.classList.toggle('open');
+    menu.classList.toggle('open');
+  });
+
   var interval;
   var previousPercentage;
   var samePercentageCount = 0;

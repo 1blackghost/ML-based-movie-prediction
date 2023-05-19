@@ -30,19 +30,23 @@
     </div>
     <p id="errorM">Uh Oh, Something Just Went Wrong!</p>
   </div>
-  <header class="header">
-    <div class="container">
-      <h1 class="logo">Movie Analyzer</h1>
-      <nav class="menu">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Top Movies</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header class="header">
+  <div class="container">
+    <div class="logo"><img src="/static/logo.png"></div>
+    <button class="hamburger-btn" aria-label="Toggle navigation">
+      <span class="hamburger-icon"></span>
+    </button>
+    <nav class="menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#top-movies-section">Top Movies</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
 
   <section class="search-section">
     <div class="container">
@@ -54,22 +58,78 @@
     </div>
   </section>
 
-  <section class="top-movies-section">
-    <div class="container">
+<section class="top-movies-section">
       <h2 class="section-title">Top Movies</h2>
+
+  <div class="container2">
+    <div class="movie-posters-container">
       <div class="movie-posters">
         <div class="movie-poster">
           <img src="/static/1.jfif" alt="Movie Poster 1">
-          <h3>Titanic</h3>
+          <h3 class="moviename">Titanic</h3>
         </div>
         <div class="movie-poster">
           <img src="/static/2.jfif" alt="Movie Poster 2">
-          <h3>Avengers</h3>
+          <h3 class="moviename">Avengers</h3>
+        </div>
+                <div class="movie-poster">
+          <img src="/static/1.jfif" alt="Movie Poster 1">
+          <h3 class="moviename">Titanic</h3>
+        </div>
+        <div class="movie-poster">
+          <img src="/static/2.jfif" alt="Movie Poster 2">
+          <h3 class="moviename">Avengers</h3>
+        </div>
+                <div class="movie-poster">
+          <img src="/static/1.jfif" alt="Movie Poster 1">
+          <h3 class="moviename">Titanic</h3>
+        </div>
+        <div class="movie-poster">
+          <img src="/static/2.jfif" alt="Movie Poster 2">
+          <h3 class="moviename">Avengers</h3>
+        </div>
+                <div class="movie-poster">
+          <img src="/static/1.jfif" alt="Movie Poster 1">
+          <h3 class="moviename">Titanic</h3>
+        </div>
+        <div class="movie-poster">
+          <img src="/static/2.jfif" alt="Movie Poster 2">
+          <h3 class="moviename">Avengers</h3>
+        </div>
+                <div class="movie-poster">
+          <img src="/static/1.jfif" alt="Movie Poster 1">
+          <h3 class="moviename">Titanic</h3>
+        </div>
+        <div class="movie-poster">
+          <img src="/static/2.jfif" alt="Movie Poster 2">
+          <h3 class="moviename">Avengers</h3>
+        </div>
+                <div class="movie-poster">
+          <img src="/static/1.jfif" alt="Movie Poster 1">
+          <h3 class="moviename">Titanic</h3>
+        </div>
+        <div class="movie-poster">
+          <img src="/static/2.jfif" alt="Movie Poster 2">
+          <h3 class="moviename">Avengers</h3>
+        </div>
+                <div class="movie-poster">
+          <img src="/static/1.jfif" alt="Movie Poster 1">
+          <h3 class="moviename">Titanic</h3>
+        </div>
+        <div class="movie-poster">
+          <img src="/static/2.jfif" alt="Movie Poster 2">
+          <h3 class="moviename">Avengers</h3>
         </div>
         <!-- Add more movie posters here -->
       </div>
     </div>
-  </section>
+    <div class="arrow-buttons">
+      <button class="left-arrow">&lt;</button>
+      <button class="right-arrow">&gt;</button>
+    </div>
+  </div>
+</section>
+
 <section id="about" class="about-section">
   <div class="container">
     <h2 class="section-title">About Movie Analyzer</h2>
