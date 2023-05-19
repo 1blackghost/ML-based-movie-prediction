@@ -1,600 +1,675 @@
 .floating-box {
-  display: none; /* Initially hidden */
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  padding: 20px;
-  z-index: 1;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 1;
 }
 
 .progress-bar {
-  height: 20px;
-  background-color: transparent; /* Set background color to transparent */
-  border-radius: 10px;
-  margin-top: 20px;
-  overflow: hidden;
-  box-shadow: none; /* Remove the box shadow */
+    height: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+    box-shadow: none;
 }
 
 
 .progress {
-  height: 100%;
-  transition: width 0.3s ease-in-out;
+    height: 100%;
+    transition: width 0.3s ease-in-out;
 }
 
-/* Progress Bar Colors */
 .progress-bar .progress {
-  background-color: red;
+    background-color: red;
 }
 
 .progress-bar .progress.analysing {
-  background-color: yellow;
+    background-color: yellow;
 }
 
 .progress-bar .progress.finished {
-  background-color: green;
+    background-color: green;
 }
 
 .progress-bar .progress.finished.blue {
-  background-color: blue;
+    background-color: blue;
 }
 
 .percentage {
-  margin-top: 10px;
-  text-align: center;
-  font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
 }
 
 .box-shadow {
-  position: fixed;
-  top: calc(50% + 4px);
-  left: calc(50% + 4px);
-  transform: translate(-50%, -50%);
-  width: 300px;
-  height: 20px;
-  background: rgba(0, 0, 0, 0.2);
-  filter: blur(10px);
-  border-radius: 8px;
-  pointer-events: none;
-  z-index: -1;
+    position: fixed;
+    top: calc(50% + 4px);
+    left: calc(50% + 4px);
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    filter: blur(10px);
+    border-radius: 8px;
+    pointer-events: none;
+    z-index: -1;
 }
 
 p {
-  margin-top: 20px;
-  text-align: center;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .error-screen {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  padding: 20px;
-  display: none;
-  z-index: 1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    display: none;
+    z-index: 1;
 }
 
 .error-header {
-  background-color: red;
-  color: #ffffff;
-  padding: 10px;
-  border-radius: 8px 8px 0 0;
-  position: relative;
+    background-color: red;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    position: relative;
 }
 
 .close-button2 {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: #ffffff;
-  border: none;
-  background: none;
-  font-size: 18px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    background: none;
+    font-size: 18px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
 }
 
 .close-button2:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .close-button2:focus {
-  outline: none;
+    outline: none;
 }
 
 .success-screen {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  padding: 20px;
-  display: none;
-  z-index: 1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    display: none;
+    z-index: 1;
 }
 
 .success-header {
-  background-color: green;
-  color: #ffffff;
-  padding: 10px;
-  border-radius: 8px 8px 0 0;
-  position: relative;
+    background-color: green;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    position: relative;
 }
 
 .close-button {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: #ffffff;
-  border: none;
-  background: none;
-  font-size: 18px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    background: none;
+    font-size: 18px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
 }
 
 .close-button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .close-button:focus {
-  outline: none;
+    outline: none;
 }
 
-/* Header */
 .header {
-  background-color: #333333;
-  padding: 20px;
-  color: #ffffff;
+    background-color: #333333;
+    padding: 20px;
+    color: #ffffff;
 }
 
 .header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
-  font-size: 24px;
+    font-size: 24px;
 }
 
 .menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
 .menu li {
-  margin-left: 20px;
+    margin-left: 20px;
 }
 
 .menu li:first-child {
-  margin-left: 0;
+    margin-left: 0;
 }
 
 .menu a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
 }
 
-/* Search Section */
 .search-section {
-  background-color: #f2f2f2;
-  padding: 40px 0;
+    background-color: #f2f2f2;
+    padding: 40px 0;
 }
 
 .search-section .container {
-  text-align: center;
-}
-
-#search-button{
-  width: 150px;
-
-}
-#search-bar {
-  width: 300px;
-}
-
-#search-bar {
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  border-radius: 4px;
-  margin-right: 10px;
+    text-align: center;
 }
 
 #search-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  background-color: #333333;
-  color: #ffffff;
-  border-radius: 4px;
-  cursor: pointer;
+    width: 150px;
+
 }
 
-/* Top Movies Section */
+#search-bar {
+    width: 300px;
+}
+
+#search-bar {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #333333;
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    left: 25%;
+}
+
 .top-movies-section {
-  padding: 40px 0;
-  text-align: center;
+    padding: 40px 0;
+    text-align: center;
 }
 
 .top-movies-section h2 {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .movie-posters {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .movie-poster {
-  width: 200px;
+    width: 200px;
 }
 
 .movie-poster img {
-  width: 100%;
-  border-radius: 8px;
+    width: 100%;
+    border-radius: 8px;
 }
 
 .movie-poster h3 {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
-/* Footer */
 .footer {
-  background-color: #333333;
-  color: #ffffff;
-  padding: 20px;
-  text-align: center;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
 }
 
-/* Movie Poster Hover Animation */
 .movie-posters {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  overflow-x: hidden;
-  position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    position: relative;
 }
 
 .movie-poster {
-  position: relative;
-  width: 200px; /* Set the desired width for the movie posters */
-  margin: 10px;
+    position: relative;
+    width: 200px;
+    margin: 10px;
 }
 
 .movie-poster img {
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
 .movie-poster:hover img {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .movie-poster::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .movie-poster:hover::before {
-  opacity: 1;
+    opacity: 1;
 }
 
 .movie-poster h3 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .movie-poster:hover h3 {
-  opacity: 1;
+    opacity: 1;
 }
 
 .section-content {
-  font-family: 'Arial', sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
-  color: #333333;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333333;
 }
 
 .section-content p {
-  margin-bottom: 20px;
-  position: relative;
+    margin-bottom: 20px;
+    position: relative;
 }
 
 .section-content p::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 20%;
-  height: 2px;
-  background-color: #333333;
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 20%;
+    height: 2px;
+    background-color: #333333;
 }
 
 .section-content p:last-child::after {
-  display: none;
+    display: none;
 }
 
 .about-section {
     background-color: #f2f2f2;
-  padding: 80px 0;
+    padding: 80px 0;
 }
 
 .section-title {
-  text-align: center;
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 40px;
-  position: relative;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    position: relative;
 }
 
 .section-title::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background-color: #333333;
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #333333;
 }
 
 .section-content {
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #555555;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555555;
 }
 
 .section-content p {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 #contact-section {
-  background-color: #ffffff;
-  padding: 40px 0;
+    background-color: #ffffff;
+    padding: 40px 0;
 }
 
 #contact-section .container {
-  text-align: center;
+    text-align: center;
 }
 
 #contact-section h2 {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 #contact-form {
-  max-width: 500px;
-  margin: 20px;
+    max-width: 500px;
+    margin-left: 30%;
 }
 
 #contact-form .form-group {
-  margin-bottom: 20px;
-  text-align: left;
+    margin-bottom: 20px;
+    text-align: left;
 }
 
 #contact-form label {
-  display: block;
-  margin-bottom: 5px;
+    display: block;
+    margin-bottom: 5px;
 }
 
 #contact-form input,
 #contact-form textarea {
-  width: 90%;
-  align-items: center;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+    width: 90%;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 #contact-form button {
-  padding: 10px 20px;
-  background-color: #333333;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+    padding: 10px 20px;
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
-    .hamburger-btn {
 
-      display: none; /* Hide the button by default */
-    }
+.hamburger-btn {
+
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
 
-  .menu a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 12px;
+    .menu a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 12px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .hamburger-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin right: 10px;
+
+    }
+
+    .hamburger-icon {
+        width: 30px;
+        height: 2px;
+        background-color: #ffffff;
+        position: relative;
+        transition: transform 0.3s;
+    }
+
+    .hamburger-icon::before,
+    .hamburger-icon::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        transition: transform 0.3s;
+    }
+
+    .hamburger-icon::before {
+        transform: translateY(-8px);
+    }
+
+    .hamburger-icon::after {
+        transform: translateY(8px);
+    }
+
+    .hamburger-btn.open .hamburger-icon {
+        transform: rotate(45deg);
+    }
+
+    .hamburger-btn.open .hamburger-icon::before {
+        transform: translateY(0) rotate(45deg);
+    }
+
+    .hamburger-btn.open .hamburger-icon::after {
+        transform: translateY(0) rotate(-45deg);
+    }
+
+    .hamburger-btn.open~.menu {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333333;
+        padding: 10px;
+        transition: transform 0.3s;
+        transform-origin: top;
+    }
+
+    .hamburger-btn.open~.menu {
+        display: block;
+        transform: scaleY(1);
+    }
+
+
 }
-  .menu {
-    display: none;
-  }
 
-  .hamburger-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-
-  .hamburger-icon {
-    width: 30px;
-    height: 2px;
-    background-color: #ffffff;
-    position: relative;
-    transition: transform 0.3s;
-  }
-
-  .hamburger-icon::before,
-  .hamburger-icon::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    transition: transform 0.3s;
-  }
-
-  .hamburger-icon::before {
-    transform: translateY(-8px);
-  }
-
-  .hamburger-icon::after {
-    transform: translateY(8px);
-  }
-
-  /* Toggle animation */
-  .hamburger-btn.open .hamburger-icon {
-    transform: rotate(45deg);
-  }
-
-  .hamburger-btn.open .hamburger-icon::before {
-    transform: translateY(0) rotate(45deg);
-  }
-
-  .hamburger-btn.open .hamburger-icon::after {
-    transform: translateY(0) rotate(-45deg);
-  }
-
-  /* Show menu when hamburger button is clicked */
-  .hamburger-btn.open ~ .menu {
-    display: block;
-  }
-  
-
+.moviename {
+    color: white;
 
 }
-.moviename{
-  color: white;
 
-}
 .movie-posters-container {
-  width: 100%;
-  overflow-x: auto;
-  white-space: nowrap;
-  padding-bottom: 20px; /* Add bottom padding to accommodate movie poster's height */
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 20px;
 }
 
 .movie-posters {
-  display: inline-block;
+    display: inline-block;
 }
 
 .movie-poster {
-  display: inline-block;
-  margin-right: 20px;
-  width: 200px;
+    display: inline-block;
+    margin-right: 20px;
+    width: 200px;
 }
 
 .movie-poster img {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
+    height: 300px;
+    width: 200px;
 }
 
-.container2{
-  position: relative;
-  display: flex;
-  align-items: center;
+.container2 {
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 
 .left-arrow,
 .right-arrow {
-  position: absolute;
-  top: 50%;
-  width: 50px;
-  height: 50px;
-  background-color: #333333;
-  color: #fff;
-  font-size: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #333333;
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: translateY(-50%);
 
 }
 
 .left-arrow {
-  left: 10px;
+    left: 10px;
 }
 
 .right-arrow {
-  right: 10px;
+    right: 10px;
 }
-.logo img{
-  position: relative;
-  margin-left: 0px;
-  height: 80px;
-  width: 200px;
+
+.logo img {
+    position: relative;
+    margin-left: 0px;
+    height: 80px;
+    width: 200px;
 
 }
+
 .movie-posters-container {
-  overflow: scroll;
-  scrollbar-width: none; /* For Firefox */
-  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .movie-posters-container::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
+    display: none;
 }
-/* Add this media query at the end of the CSS code */
+
+#search-bar {
+    padding: 8px 32px;
+    background-image: url('icon.png');
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+    height: 20px;
+    width: 500px;
+}
+
 @media screen and (max-width: 768px) {
-  .movie-posters-container{
-    scrollbar-width: auto;
-  }
-  body{
-    padding: 0;
-    margin:0;
-  }
-  .section-content{
-    margin-left:20px;
-    margin-right: 20px;
-  }
+    .movie-posters-container {
+        scrollbar-width: auto;
+    }
+
+    body {
+        padding: 0;
+        margin-left: 7px;
+    }
+
+    .section-content {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #contact-form {
+        margin-left: 20px;
+        text-align: center;
+    }
+
+    #myc {
+        display: flex;
+        width: 50%;
+    }
+
+    #search-button {
+        width: 50%;
+        position: relative;
+    }
+
+    #search-bar {
+        width: 160%;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    #headersec {
+        height: 30px;
+    }
+
+    .logo {
+        position: relative;
+        top: 0;
+
+    }
+
+    #head-container {
+        position: absolute;
+        top: 0;
+    }

@@ -1,178 +1,168 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta name='viewport' content=
-'width=device-width, initial-scale=1.0'>
-  <title>Movie Analyzer</title>
-  <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Movie Analyzer</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+
+
 </head>
+
 <body>
-  <div class="floating-box" id="floating-box">
-    <div class="header">
-      <h2>Movie Analyzer</h2>
+    <div class="floating-box" id="floating-box">
+        <div class="header">
+            <h2>Movie Analyzer</h2>
+        </div>
+        <div class="progress-bar">
+            <div class="progress" id="progress-bar"></div>
+        </div>
+        <p class="percentage" id="progress-text">0%</p>
+        <p id="text">Initializing System...</p>
+        <button id="search-button">Cancel</button>
     </div>
-    <div class="progress-bar">
-      <div class="progress" id="progress-bar"></div>
+    <div class="success-screen">
+        <div class="success-header">
+            <h2>Success!</h2>
+            <button class="close-button">&times;</button>
+        </div>
+        <p id="messageS">Accuracy: <span id="accuracy" class="accuracy"></span></p>
+        <p>Sentiment: <span id="sentiment" class="sentiment"></span></p>
     </div>
-    <p class="percentage" id="progress-text">0%</p>
-    <p id="text">Initializing System...</p>
-  </div>
-  <div class="success-screen">
-    <div class="success-header">
-      <h2>Success!</h2>
-      <button class="close-button">&times;</button>
+    <div class="error-screen">
+        <div class="error-header">
+            <h2>Error!</h2>
+            <button class="close-button2">&times;</button>
+        </div>
+        <p id="errorM">Uh Oh, Something Just Went Wrong!</p>
     </div>
-    <p id="messageS">Accuracy: <span id="accuracy" class="accuracy"></span></p>
-    <p>Sentiment: <span id="sentiment" class="sentiment"></span></p>
-  </div>
-  <div class="error-screen">
-    <div class="error-header">
-      <h2>Error!</h2>
-      <button class="close-button2">&times;</button>
-    </div>
-    <p id="errorM">Uh Oh, Something Just Went Wrong!</p>
-  </div>
-<header class="header">
-  <div class="container">
-    <div class="logo"><img src="/static/logo.png"></div>
-    <button class="hamburger-btn" aria-label="Toggle navigation">
-      <span class="hamburger-icon"></span>
-    </button>
-    <nav class="menu">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#top-movies-section">Top Movies</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact-section">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <header class="header" id="headersec">
+        <div class="container" id="head-container">
+            <div class="logo"><img src="/static/logo.png"></div>
+            <button class="hamburger-btn" aria-label="Toggle navigation">
+                <span class="hamburger-icon"></span>
+            </button>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#top-movies-section">Top Movies</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
 
-  <section class="search-section">
-    <div class="container">
-      <form id="search-form">
-        <input autocomplete="off" type="text" id="search-bar" placeholder="Search...">
+    <section class="search-section">
+        <div class="container" id="myc">
+            <form id="search-form">
+                <input autocomplete="off" type="text" id="search-bar" placeholder="Search...">
 
-        <button type="submit" id="search-button">Search</button>
-      </form>
-    </div>
-  </section>
+            </form>
+        </div>
+    </section>
 
-<section class="top-movies-section">
-      <h2 class="section-title">Top Movies</h2>
+    <section class="top-movies-section">
+        <h2 class="section-title">Top Movies from IMDb</h2>
 
-  <div class="container2">
-    <div class="movie-posters-container">
-      <div class="movie-posters">
-        <div class="movie-poster">
-          <img src="/static/1.jfif" alt="Movie Poster 1">
-          <h3 class="moviename">Titanic</h3>
+        <div class="container2">
+            <div class="movie-posters-container">
+                <div class="movie-posters">
+                    <div class="movie-poster">
+                        <img src="/static/1.jfif" alt="The Shawshank Redemption">
+                    </div>
+                    <div class="movie-poster">
+                        <img src="/static/2.jfif" alt="The Godfather">
+                    </div>
+                    <div class="movie-poster">
+                        <img src="/static/3.jfif" alt="Avengers Infinity War">
+                    </div>
+                    <div class="movie-poster">
+                        <img src="/static/4.jfif" alt="The Dark Knight">
+                    </div>
+                    <div class="movie-poster">
+                        <img src="/static/5.jfif" alt="The Godfather Part 2">
+                    </div>
+                    <div class="movie-poster">
+                        <img src="/static/6.jfif" alt="12 Angry Men">
+                    </div>
+                    <div class="movie-poster">
+                        <img src="/static/7.jfif" alt="2018">
+                    </div>
+                    <div class="movie-poster">
+                        <img src="/static/av.jfif" alt="Avengers">
+                    </div>
+                    <div class="movie-poster">
+                        <img src="/static/8.jfif" alt="Ghosted">
+                    </div>
+                    <div class="movie-poster">
+                        <img src="/static/9.webp" alt="Ponniyin Selvan 2">
+                    </div>
+                    <div class="movie-poster">
+                        <img src="/static/9.jfif" alt="Peaky Blinders">
+                    </div>
+                    <div class="movie-poster">
+                        <img src="/static/10.jfif" alt="Breaking Bad">
+                    </div>
+                    <div class="movie-poster">
+                        <img src="/static/11.jfif" alt="Fast X">
+                    </div>
+                    <div class="movie-poster">
+                        <img src="/static/12.jfif" alt="Fight Club">
+                    </div>
+                    <!-- Add more movie posters here -->
+                </div>
+            </div>
+            <div class="arrow-buttons">
+                <button class="left-arrow">&lt;</button>
+                <button class="right-arrow">&gt;</button>
+            </div>
         </div>
-        <div class="movie-poster">
-          <img src="/static/2.jfif" alt="Movie Poster 2">
-          <h3 class="moviename">Avengers</h3>
-        </div>
-                <div class="movie-poster">
-          <img src="/static/1.jfif" alt="Movie Poster 1">
-          <h3 class="moviename">Titanic</h3>
-        </div>
-        <div class="movie-poster">
-          <img src="/static/2.jfif" alt="Movie Poster 2">
-          <h3 class="moviename">Avengers</h3>
-        </div>
-                <div class="movie-poster">
-          <img src="/static/1.jfif" alt="Movie Poster 1">
-          <h3 class="moviename">Titanic</h3>
-        </div>
-        <div class="movie-poster">
-          <img src="/static/2.jfif" alt="Movie Poster 2">
-          <h3 class="moviename">Avengers</h3>
-        </div>
-                <div class="movie-poster">
-          <img src="/static/1.jfif" alt="Movie Poster 1">
-          <h3 class="moviename">Titanic</h3>
-        </div>
-        <div class="movie-poster">
-          <img src="/static/2.jfif" alt="Movie Poster 2">
-          <h3 class="moviename">Avengers</h3>
-        </div>
-                <div class="movie-poster">
-          <img src="/static/1.jfif" alt="Movie Poster 1">
-          <h3 class="moviename">Titanic</h3>
-        </div>
-        <div class="movie-poster">
-          <img src="/static/2.jfif" alt="Movie Poster 2">
-          <h3 class="moviename">Avengers</h3>
-        </div>
-                <div class="movie-poster">
-          <img src="/static/1.jfif" alt="Movie Poster 1">
-          <h3 class="moviename">Titanic</h3>
-        </div>
-        <div class="movie-poster">
-          <img src="/static/2.jfif" alt="Movie Poster 2">
-          <h3 class="moviename">Avengers</h3>
-        </div>
-                <div class="movie-poster">
-          <img src="/static/1.jfif" alt="Movie Poster 1">
-          <h3 class="moviename">Titanic</h3>
-        </div>
-        <div class="movie-poster">
-          <img src="/static/2.jfif" alt="Movie Poster 2">
-          <h3 class="moviename">Avengers</h3>
-        </div>
-        <!-- Add more movie posters here -->
-      </div>
-    </div>
-    <div class="arrow-buttons">
-      <button class="left-arrow">&lt;</button>
-      <button class="right-arrow">&gt;</button>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="about" class="about-section">
-  <div class="container">
-    <h2 class="section-title">About Movie Analyzer</h2>
-    <div class="section-content">
-Movie Analyzer is an advanced platform that utilizes cutting-edge machine learning techniques to offer comprehensive insights and analysis of movies. Our platform employs state-of-the-art algorithms to extract valuable information from movie reviews, social media, and other sources, providing users with a deep understanding of films and enabling them to explore new perspectives.
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Movie Analyzer</h2>
+            <div class="section-content">
+                Movie Analyzer is an advanced platform that utilizes cutting-edge machine learning techniques to offer comprehensive insights and analysis of movies. Our platform employs state-of-the-art algorithms to extract valuable information from movie reviews, social media, and other sources, providing users with a deep understanding of films and enabling them to explore new perspectives.
 
-      <hr>
-By leveraging natural language processing and sentiment analysis, Movie Analyzer examines the sentiment, themes, and critical reception of movies. This data-driven approach allows users to make informed decisions and enhance their movie-watching experience. We strive to deliver accurate and reliable analysis, ensuring that our users have access to the most up-to-date and insightful information about their favorite films.
+                <hr>
+                By leveraging natural language processing and sentiment analysis, Movie Analyzer examines the sentiment, themes, and critical reception of movies. This data-driven approach allows users to make informed decisions and enhance their movie-watching experience. We strive to deliver accurate and reliable analysis, ensuring that our users have access to the most up-to-date and insightful information about their favorite films.
 
-      <hr>
-Whether you're a casual moviegoer or a dedicated cinephile, Movie Analyzer caters to all levels of interest and curiosity. Our platform offers a normalized and easily understandable text, making it accessible to a wide range of users. Join Movie Analyzer today and unlock a world of in-depth movie analysis and discovery!
-    </div>
-  </div>
-</section>
-<section id="contact-section">
-  <div class="container">
-    <h2 class="section-title">Contact</h2>
-    <form id="contact-form">
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Your name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Your email" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" placeholder="Your message" required></textarea>
-      </div>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-</section>
+                <hr>
+                Whether you're a casual moviegoer or a dedicated cinephile, Movie Analyzer caters to all levels of interest and curiosity. Our platform offers a normalized and easily understandable text, making it accessible to a wide range of users. Join Movie Analyzer today and unlock a world of in-depth movie analysis and discovery!
+            </div>
+        </div>
+    </section>
+    <section id="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
 
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="/static/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/static/main.js"></script>
 
-  <footer class="footer">
-    <p>&copy; 2023 Movie Analyzer. All rights reserved.</p>
-  </footer>
+    <footer class="footer">
+        <p>&copy; 2023 Movie Analyzer. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>
